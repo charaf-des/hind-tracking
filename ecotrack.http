@@ -1,0 +1,31 @@
+@token = nvHlQEgwDXD879KZ2N24ov1Hr2KUG7E9ZUBKk1PINVtomY12QxJxk7LfNUfa
+@base = https://anderson-ecommerce.ecotrack.dz/api/v1
+@tracking = ECM8KZ2604205469469
+
+### Test 0 — validate token (confirmed working)
+GET {{base}}/validate/token?api_token={{token}}
+Accept: application/json
+
+### Test 1 — tracking info (confirmed working)
+GET {{base}}/get/tracking/info?tracking={{tracking}}&api_token={{token}}
+Accept: application/json
+
+### Test 2 — list all orders
+GET {{base}}/get/commandes?api_token={{token}}
+Accept: application/json
+
+### Test 3 — single order detail
+GET {{base}}/get/commande?tracking={{tracking}}&api_token={{token}}
+Accept: application/json
+
+### Test 4 — status history / maj
+GET {{base}}/get/maj?tracking={{tracking}}&api_token={{token}}
+Accept: application/json
+
+### Test 5 — new orders only (filter)
+GET {{base}}/get/commandes?api_token={{token}}&statut=nouveau
+Accept: application/json
+
+### Test 6 — paginated orders
+GET {{base}}/get/commandes?api_token={{token}}&page=1
+Accept: application/json

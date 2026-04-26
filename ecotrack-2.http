@@ -1,0 +1,35 @@
+@token = nvHlQEgwDXD879KZ2N24ov1Hr2KUG7E9ZUBKk1PINVtomY12QxJxk7LfNUfa
+@base = https://anderson-ecommerce.ecotrack.dz/api/v1
+@tracking = ECM8KZ2604205469469
+
+### A — webhook registration (does ecotrack push to you?)
+POST {{base}}/webhook/register?api_token={{token}}
+Content-Type: application/json
+
+{"url": "https://test.com/hook"}
+
+### B — list with different word
+GET {{base}}/get/colis?api_token={{token}}
+Accept: application/json
+
+### C — list with French
+GET {{base}}/get/liste?api_token={{token}}
+Accept: application/json
+
+### D — orders with different verb
+GET {{base}}/get/orders?api_token={{token}}
+Accept: application/json
+
+### E — check if create order exists
+POST {{base}}/create/commande?api_token={{token}}
+Content-Type: application/json
+
+{}
+
+### F — get recent
+GET {{base}}/get/recent?api_token={{token}}
+Accept: application/json
+
+### G — get new orders
+GET {{base}}/get/new?api_token={{token}}
+Accept: application/json0

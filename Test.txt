@@ -1,0 +1,28 @@
+@token = nvHlQEgwDXD879KZ2N24ov1Hr2KUG7E9ZUBKk1PINVtomY12QxJxk7LfNUfa
+@base = https://app.ecotrack.dz/api/v1
+@tracking = ECM8KZ2604205469469
+
+### Test 1 — status updates (the one that worked)
+GET https://anderson-ecommerce.ecotrack.dz/get/maj?tracking=ECM8KZ2604205469469
+Authorization: Token nvHlQEgwDXD879KZ2N24ov1Hr2KUG7E9ZUBKk1PINVtomY12QxJxk7LfNUfa
+Accept: application/json
+
+### Test 2 — single order details
+GET https://anderson-ecommerce.ecotrack.dz/get/commande?tracking=ECM8KZ2604205469469
+Authorization: Token nvHlQEgwDXD879KZ2N24ov1Hr2KUG7E9ZUBKk1PINVtomY12QxJxk7LfNUfa
+Accept: application/json
+
+### Test 3 — list all orders
+GET https://anderson-ecommerce.ecotrack.dz/get/commandes
+Authorization: Token nvHlQEgwDXD879KZ2N24ov1Hr2KUG7E9ZUBKk1PINVtomY12QxJxk7LfNUfa
+Accept: application/json
+
+### Test 4 — tracking history
+GET https://anderson-ecommerce.ecotrack.dz/get/historique?tracking=ECM8KZ2604205469469
+Authorization: Token nvHlQEgwDXD879KZ2N24ov1Hr2KUG7E9ZUBKk1PINVtomY12QxJxk7LfNUfa
+Accept: application/json
+
+### Test 5 — try suivi endpoint
+GET https://anderson-ecommerce.ecotrack.dz/get/suivi?tracking=ECM8KZ2604205469469
+Authorization: Token nvHlQEgwDXD879KZ2N24ov1Hr2KUG7E9ZUBKk1PINVtomY12QxJxk7LfNUfa
+Accept: application/json
